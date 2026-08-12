@@ -33,9 +33,10 @@ public class SubTileTinkleFlower extends GeneratingFlowerBlockEntity {
             int time = tag.getByte(TAG_TIME);
             int prevTime = time;
             for(Player player : getLevel().getEntitiesOfClass(Player.class, new AABB(getEffectivePos().offset(-RANGE, -RANGE, -RANGE), getEffectivePos().offset(RANGE + 1, RANGE + 1, RANGE + 1)))) {
-                double vx = player.getX() - player.xOld;
-                double vy = player.getY() - player.yOld;
-                double vz = player.getZ() - player.zOld;
+                // 1.20.1: use delta movement (velocity) for reliable movement detection
+                double vx = player.getDeltaMovement().x;
+                double vy = player.getDeltaMovement().y;
+                double vz = player.getDeltaMovement().z;
                 double vel = Math.sqrt(vx*vx + vy*vy + vz*vz);
                 if(player.hasEffect(MobEffects.MOVEMENT_SPEED))
                     vel *= 1.2;
@@ -49,7 +50,10 @@ public class SubTileTinkleFlower extends GeneratingFlowerBlockEntity {
                         addMana(30);
 
                     player.causeFoodExhaustion(0.02F);
-                    AdvancementHandler.INSTANCE.grantAdvancement((ServerPlayer) player, LibAdvancementNames.TINKLEUSE);
+                    try {
+                        AdvancementHandler.INSTANCE.grantAdvancement((ServerPlayer) player, LibAdvancementNames.TINKLEUSE);
+                    } catch (Exception ignored) {
+                    }
                     time %= limit;
                 }
 
