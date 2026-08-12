@@ -4,6 +4,9 @@ build/
 run/
 run-data/
 
+# Released binaries (kept local; uploaded manually to GitHub Releases)
+releases/
+
 # IDE
 .idea/
 *.iml
