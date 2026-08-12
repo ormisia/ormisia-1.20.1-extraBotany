@@ -74,7 +74,8 @@ public final class AdvancementHandler {
                 ClientAdvancements cm = conn.getAdvancements();
                 Advancement adv = cm.getAdvancements().get(id);
                 if (adv != null) {
-                    Map<Advancement, AdvancementProgress> progressMap = ObfuscationReflectionHelper.getPrivateValue(ClientAdvancements.class, cm, "progress");
+                    // 1.20.1 production runs on SRG names; the ClientAdvancements progress map field is f_104390_
+                    Map<Advancement, AdvancementProgress> progressMap = ObfuscationReflectionHelper.getPrivateValue(ClientAdvancements.class, cm, "f_104390_");
                     AdvancementProgress progress = progressMap.get(adv);
                     return progress != null && progress.isDone();
                 }
