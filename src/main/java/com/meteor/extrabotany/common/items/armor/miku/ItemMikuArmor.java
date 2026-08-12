@@ -131,15 +131,13 @@ public class ItemMikuArmor extends ArmorItem implements ManaDiscountArmor, Phant
         return new ModelMikuArmor(slot);
     }
 
-    private static final ItemStack[] armorSet = new ItemStack[] {
+    public ItemStack[] getArmorSetStacks() {
+        return new ItemStack[] {
             new ItemStack(ModItems.armor_miku_helm.get()),
             new ItemStack(ModItems.armor_miku_chest.get()),
             new ItemStack(ModItems.armor_miku_legs.get()),
             new ItemStack(ModItems.armor_miku_boots.get())
-    };
-
-    public ItemStack[] getArmorSetStacks() {
-        return armorSet;
+        };
     }
 
     public boolean hasArmorSet(Player player) {

@@ -60,16 +60,14 @@ public class ItemShootingGuardianArmor extends ItemMikuArmor {
         return slot == EquipmentSlot.HEAD ? LibMisc.MOD_ID + ":textures/model/armor_shootingguardian_helmet.png" : LibMisc.MOD_ID + ":textures/model/armor_shootingguardian.png";
     }
 
-    private static final ItemStack[] armorSet = new ItemStack[] {
+    @Override
+    public ItemStack[] getArmorSetStacks() {
+        return new ItemStack[] {
             new ItemStack(ModItems.armor_shootingguardian_helm.get()),
             new ItemStack(ModItems.armor_shootingguardian_chest.get()),
             new ItemStack(ModItems.armor_shootingguardian_legs.get()),
             new ItemStack(ModItems.armor_shootingguardian_boots.get())
     };
-
-    @Override
-    public ItemStack[] getArmorSetStacks() {
-        return armorSet;
     }
 
     @Override

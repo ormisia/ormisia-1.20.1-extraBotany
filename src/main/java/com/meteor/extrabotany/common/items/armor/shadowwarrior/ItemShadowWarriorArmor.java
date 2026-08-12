@@ -75,16 +75,14 @@ public class ItemShadowWarriorArmor extends ItemMikuArmor {
         return LibMisc.MOD_ID + ":textures/model/armor_shadowwarrior.png";
     }
 
-    private static final ItemStack[] armorSet = new ItemStack[] {
+    @Override
+    public ItemStack[] getArmorSetStacks() {
+        return new ItemStack[] {
             new ItemStack(ModItems.armor_shadowwarrior_helm.get()),
             new ItemStack(ModItems.armor_shadowwarrior_chest.get()),
             new ItemStack(ModItems.armor_shadowwarrior_legs.get()),
             new ItemStack(ModItems.armor_shadowwarrior_boots.get())
     };
-
-    @Override
-    public ItemStack[] getArmorSetStacks() {
-        return armorSet;
     }
 
     @Override
