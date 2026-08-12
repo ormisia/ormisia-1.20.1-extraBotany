@@ -1,0 +1,600 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Java: 21, JVM: 21+35-LTS-2513 (Oracle Corporation), Arch: amd64
+
+> Task :compileJava
+注: SpongePowered MIXIN Annotation Processor Version=0.8.5
+注: Supported obfuscation types: ObfuscationServiceMCP supports [searge,notch]
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\ModItems.java:56: 错误: 找不到符号
+            .effect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWNESS, 500), 1.0F)
+                                                    ^
+  符号:   变量 MOVEMENT_SLOWNESS
+  位置: 类 MobEffects
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\ModItems.java:63: 错误: 找不到符号
+            .effect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWNESS, 600, 3), 1.0F)
+                                                    ^
+  符号:   变量 MOVEMENT_SLOWNESS
+  位置: 类 MobEffects
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\ModItems.java:200: 错误: 找不到符号
+        return new Item.Properties().tab(ExtraBotanyGroup.TAB);
+                                    ^
+  符号:   方法 tab(CreativeModeTab)
+  位置: 类 Properties
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\ClientProxy.java:82: 警告: [removal] FMLJavaModLoadingContext 中的 get() 已过时, 且标记为待删除
+        IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
+                                                   ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\ClientProxy.java:96: 警告: [removal] ItemBlockRenderTypes 中的 setRenderLayer(Block,RenderType) 已过时, 且标记为待删除
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.powerframe.get(), RenderType.cutout());
+                            ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\ClientProxy.java:101: 警告: [removal] ItemBlockRenderTypes 中的 setRenderLayer(Block,RenderType) 已过时, 且标记为待删除
+                        ItemBlockRenderTypes.setRenderLayer(b, RenderType.cutout());
+                                            ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\ClientProxy.java:128: 错误: 不兼容的类型: Map<String,EntityRenderer<? extends Player>>无法转换为Map<String,PlayerRenderer>
+        Map<String, PlayerRenderer> skinMap = Minecraft.getInstance().getEntityRenderDispatcher().getSkinMap();
+                                                                                                            ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\renderer\entity\layers\HeldFakeItemLayer.java:29: 错误: 找不到符号
+        boolean lvt_11_1_ = p_225628_4_.getPrimaryHand() == HumanoidArm.RIGHT;
+                                       ^
+  符号:   方法 getPrimaryHand()
+  位置: 类型为T的变量 p_225628_4_
+  其中, T是类型变量:
+    T扩展已在类 HeldFakeItemLayer中声明的LivingEntity
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\renderer\entity\layers\HeldFakeItemLayer.java:68: 错误: 找不到符号
+            Minecraft.getInstance().getItemInHandRenderer().renderItem(p_229135_1_, p_229135_2_, p_229135_3_, lvt_8_1_, p_229135_5_, p_229135_6_, p_229135_7_);
+                                   ^
+  符号:   方法 getItemInHandRenderer()
+  位置: 类 Minecraft
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\renderer\entity\RenderEGO.java:38: 警告: [removal] ResourceLocation 中的 ResourceLocation(String) 已过时, 且标记为待删除
+    private static final ResourceLocation TEXTURE_ALEX = new ResourceLocation("textures/entity/alex.png");
+                                                         ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\ego\EntityEGOLandmine.java:261: 错误: 对于drop(boolean), 找不到合适的方法
+                            player.drop(true);
+                                  ^
+    方法 Player.drop(ItemStack,boolean)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 Player.drop(ItemStack,boolean,boolean)不适用
+      (实际参数列表和形式参数列表长度不同)
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\ego\EntityEGO.java:115: 警告: [removal] ResourceLocation 中的 ResourceLocation(String,String) 已过时, 且标记为待删除
+            new ResourceLocation("openblocks", "beartrap"),
+            ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\ego\EntityEGO.java:116: 警告: [removal] ResourceLocation 中的 ResourceLocation(String,String) 已过时, 且标记为待删除
+            new ResourceLocation("thaumictinkerer", "magnet")
+            ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\ego\EntityEGO.java:468: 错误: 找不到符号
+            Player saveLastAttacker = getLastHurtByPlayer();
+                                      ^
+  符号:   方法 getLastHurtByPlayer()
+  位置: 类 EntityEGO
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\ego\EntityEGO.java:550: 错误: level 在 Entity 中是 private 访问控制
+            ((ServerLevel) level).getChunkSource().broadcastAndSend(player,
+                           ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\ego\EntityEGO.java:852: 错误: 不兼容的类型: 从double转换到int可能会有损失
+        BlockPos tentativeFloorPos = new BlockPos(newX, newY - 1, newZ);
+                                                  ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\ego\EntityEGO.java:934: 错误: 找不到符号
+        mc.getItemRenderer().renderGuiItem(stack, px, py);
+                            ^
+  符号:   方法 renderGuiItem(ItemStack,int,int)
+  位置: 类 ItemRenderer
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\EntityFlamescionSlash.java:64: 错误: 找不到符号
+                entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWNESS, 2, 3));
+                                                                 ^
+  符号:   变量 MOVEMENT_SLOWNESS
+  位置: 类 MobEffects
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\EntityFlamescionSlash.java:88: 错误: 不兼容的类型: 从double转换到int可能会有损失
+        BlockPos source = new BlockPos(getX(), getY(), getZ());
+                                           ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\EntityFlamescionSword.java:62: 错误: 不兼容的类型: 从double转换到int可能会有损失
+        BlockPos source = new BlockPos(getX(), getY(), getZ());
+                                           ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\EntityFlamescionUlt.java:69: 错误: 不兼容的类型: 从double转换到int可能会有损失
+        BlockPos source = new BlockPos(getX(), getY(), getZ());
+                                           ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\EntityFlamescionVoid.java:46: 错误: 找不到符号
+                    entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWNESS, 2, 3));
+                                                                     ^
+  符号:   变量 MOVEMENT_SLOWNESS
+  位置: 类 MobEffects
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\EntityFlamescionVoid.java:75: 错误: 不兼容的类型: 从double转换到int可能会有损失
+        BlockPos source = new BlockPos(getX(), getY(), getZ());
+                                           ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\renderer\entity\RenderKeyOfTruth.java:27: 错误: 不兼容的类型: ModelKeyOfTruth无法转换为EntityModel<EntityKeyOfTruth>
+    private EntityModel<EntityKeyOfTruth> motorModel = new ModelKeyOfTruth();
+                                                       ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\EntityKeyOfTruth.java:99: 错误: 对于playSound(<空值>,double,double,double,SoundEvent,SoundSource,float,float,boolean), 找不到合适的方法
+                    level().playSound(null, getX(), getY(), getZ(), ModSounds.shoot.get(), SoundSource.PLAYERS, 0.25F, 1F, true);
+                           ^
+    方法 LevelAccessor.playSound(Player,BlockPos,SoundEvent,SoundSource)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 Level.playSound(Entity,BlockPos,SoundEvent,SoundSource,float,float)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 Level.playSound(Player,BlockPos,SoundEvent,SoundSource,float,float)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 Level.playSound(Player,double,double,double,SoundEvent,SoundSource,float,float)不适用
+      (实际参数列表和形式参数列表长度不同)
+    方法 Level.playSound(Player,Entity,SoundEvent,SoundSource,float,float)不适用
+      (实际参数列表和形式参数列表长度不同)
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\EntityKeyOfTruth.java:123: 错误: 不兼容的类型: 从double转换到int可能会有损失
+        BlockPos source = new BlockPos(getX(), getY(), getZ());
+                                           ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\renderer\entity\RenderMotor.java:21: 错误: 不兼容的类型: ModelMotor无法转换为EntityModel<EntityMotor>
+    private EntityModel<EntityMotor> motorModel = new ModelMotor();
+                                                  ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\mountable\EntityMotor.java:155: 错误: 不兼容的类型: 从double转换到int可能会有损失
+                        if (this.level().getBlockState(new BlockPos(getX(), getY(), getZ()).offset((int)mx,(int)my,(int)mz)).isAir() == false)
+                                                                        ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\mountable\EntityMotor.java:203: 错误: 不兼容的类型: 从double转换到int可能会有损失
+                    for (LivingEntity living : getEntitiesAround(new BlockPos(player.getX(), player.getY(), player.getZ()), 4F, player.level())) {
+                                                                                         ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\mountable\EntityMotor.java:230: 错误: 无法将类 Entity中的方法 isPassenger应用到给定类型;
+            if (source.getDirectEntity() != null && this.isPassenger(source.getDirectEntity())) {
+                                                        ^
+  需要: 没有参数
+  找到:    Entity
+  原因: 实际参数列表和形式参数列表长度不同
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\mountable\EntityMotor.java:254: 错误: 不兼容的类型: 从double转换到int可能会有损失
+        return getEntitiesAround(new BlockPos(getX(), getY(), getZ()), 12F, this.level());
+                                                  ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\EntitySlash.java:52: 错误: 找不到符号
+                entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWNESS, 2, 3));
+                                                                 ^
+  符号:   变量 MOVEMENT_SLOWNESS
+  位置: 类 MobEffects
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\EntitySlash.java:80: 错误: 不兼容的类型: 从double转换到int可能会有损失
+        BlockPos source = new BlockPos(getX(), getY(), getZ());
+                                           ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\EntityStrengthenSlash.java:110: 错误: 不兼容的类型: 从double转换到int可能会有损失
+        BlockPos source = new BlockPos(getX(), getY(), getZ());
+                                           ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\renderer\entity\RenderUfo.java:21: 错误: 不兼容的类型: ModelUfo无法转换为EntityModel<EntityUfo>
+    private EntityModel<EntityUfo> ufoModel = new ModelUfo();
+                                              ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\mountable\EntityUfo.java:139: 错误: 不兼容的类型: 从double转换到int可能会有损失
+        return getEntitiesBelow(new BlockPos(getX(), getY(), getZ()), this.level());
+                                                 ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\mountable\EntityUfo.java:153: 错误: 无法将类 Entity中的方法 isPassenger应用到给定类型;
+            if (source.getEntity() != null && this.isPassenger(source.getEntity())) {
+                                                  ^
+  需要: 没有参数
+  找到:    Entity
+  原因: 实际参数列表和形式参数列表长度不同
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\RenderHelper.java:38: 错误: 找不到符号
+            stack.getItem().getItemStackTileEntityRenderer().renderByItem(stack, ItemDisplayContext.NONE, ms, buffers, light, overlay);
+                           ^
+  符号:   方法 getItemStackTileEntityRenderer()
+  位置: 类 Item
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\RenderHelper.java:54: 错误: 不兼容的类型: Random无法转换为RandomSource
+            renderBakedItemQuads(ms, buffer, color, model.getQuads(null, direction, random), stack, light, overlay);
+                                                                                    ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\RenderHelper.java:58: 错误: 不兼容的类型: Random无法转换为RandomSource
+        renderBakedItemQuads(ms, buffer, color, model.getQuads(null, null, random), stack, light, overlay);
+                                                                           ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\blocks\ModSubtiles.java:39: 错误: 找不到符号
+    public static final RegistryObject<BlockEntityType<SubTileEdelweiss>> EDELWEISS = createFlower("edelweiss", MobEffects.MOVEMENT_SLOWNESS, 80, SubTileEdelweiss::new);
+                                                                                                                          ^
+  符号:   变量 MOVEMENT_SLOWNESS
+  位置: 类 MobEffects
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\capability\CapabilityEventHandler.java:20: 警告: [removal] ResourceLocation 中的 ResourceLocation(String,String) 已过时, 且标记为待删除
+            event.addCapability(new ResourceLocation(LibMisc.MOD_ID, "thunderenergy"), new HerrscherEnergyProvider());
+                                ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\capability\CapabilityEventHandler.java:21: 警告: [removal] ResourceLocation 中的 ResourceLocation(String,String) 已过时, 且标记为待删除
+            event.addCapability(new ResourceLocation(LibMisc.MOD_ID, "flamescion"), new FlamescionProvider());
+                                ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\capability\CapabilityEventHandler.java:29: 错误: 找不到符号
+            LazyOptional<IHerrscherEnergy> newSpeedCap = event.getPlayer().getCapability(CapabilityHandler.HERRSCHERENERGY_CAPABILITY);
+                                                              ^
+  符号:   方法 getPlayer()
+  位置: 类型为Clone的变量 event
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\capability\CapabilityEventHandler.java:39: 错误: 找不到符号
+            LazyOptional<IFlamescion> newFlamescionCap = event.getPlayer().getCapability(CapabilityHandler.FLAMESCION_CAPABILITY);
+                                                              ^
+  符号:   方法 getPlayer()
+  位置: 类型为Clone的变量 event
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\EquipmentHandler.java:21: 警告: [removal] FMLJavaModLoadingContext 中的 get() 已过时, 且标记为待删除
+            FMLJavaModLoadingContext.get().getModEventBus().addListener(CurioIntegration::sendImc);
+                                    ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:30: 警告: [removal] top.theillusivec4.curios.api 中的 SlotTypeMessage 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.CHARM.getMessageBuilder().size(2).build());
+                                       ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:30: 警告: [removal] top.theillusivec4.curios.api 中的 SlotTypePreset 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.CHARM.getMessageBuilder().size(2).build());
+                                                                            ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:30: 警告: [removal] SlotTypePreset 中的 getMessageBuilder() 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.CHARM.getMessageBuilder().size(2).build());
+                                                                                                ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:30: 警告: [removal] Builder 中的 size(int) 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.CHARM.getMessageBuilder().size(2).build());
+                                                                                                                    ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:30: 警告: [removal] Builder 中的 build() 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.CHARM.getMessageBuilder().size(2).build());
+                                                                                                                            ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:31: 警告: [removal] top.theillusivec4.curios.api 中的 SlotTypeMessage 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.BODY.getMessageBuilder().build());
+                                       ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:31: 警告: [removal] top.theillusivec4.curios.api 中的 SlotTypePreset 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.BODY.getMessageBuilder().build());
+                                                                            ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:31: 警告: [removal] SlotTypePreset 中的 getMessageBuilder() 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.BODY.getMessageBuilder().build());
+                                                                                               ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:31: 警告: [removal] Builder 中的 build() 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.BODY.getMessageBuilder().build());
+                                                                                                                   ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:32: 警告: [removal] top.theillusivec4.curios.api 中的 SlotTypeMessage 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.HEAD.getMessageBuilder().build());
+                                       ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:32: 警告: [removal] top.theillusivec4.curios.api 中的 SlotTypePreset 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.HEAD.getMessageBuilder().build());
+                                                                            ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:32: 警告: [removal] SlotTypePreset 中的 getMessageBuilder() 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.HEAD.getMessageBuilder().build());
+                                                                                               ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:32: 警告: [removal] Builder 中的 build() 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.HEAD.getMessageBuilder().build());
+                                                                                                                   ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:33: 警告: [removal] top.theillusivec4.curios.api 中的 SlotTypeMessage 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("mount").priority(30).build());
+                                       ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:33: 警告: [removal] top.theillusivec4.curios.api 中的 SlotTypeMessage 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("mount").priority(30).build());
+                                                                                ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:33: 警告: [removal] SlotTypeMessage 中的 Builder 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("mount").priority(30).build());
+                                                                                               ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:33: 警告: [removal] Builder 中的 Builder(String) 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("mount").priority(30).build());
+                                                                            ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:33: 警告: [removal] Builder 中的 priority(int) 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("mount").priority(30).build());
+                                                                                                                ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:33: 警告: [removal] Builder 中的 build() 已过时, 且标记为待删除
+        InterModComms.sendTo("curios", SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("mount").priority(30).build());
+                                                                                                                             ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:38: 警告: [removal] ICuriosHelper 中的 getEquippedCurios(LivingEntity) 已过时, 且标记为待删除
+        return CuriosApi.getCuriosHelper().getEquippedCurios(living);
+                                          ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:43: 警告: [removal] ICuriosHelper 中的 findEquippedCurio(Item,LivingEntity) 已过时, 且标记为待删除
+        return CuriosApi.getCuriosHelper().findEquippedCurio(item, living)
+                                          ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\core\CurioIntegration.java:50: 警告: [removal] ICuriosHelper 中的 findEquippedCurio(Predicate<ItemStack>,LivingEntity) 已过时, 且标记为待删除
+        return CuriosApi.getCuriosHelper().findEquippedCurio(pred, living)
+                                          ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\entities\projectile\EntityInfluxWaverProjectile.java:89: 错误: 找不到符号
+                    living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWNESS, 60, 1));
+                                                                     ^
+  符号:   变量 MOVEMENT_SLOWNESS
+  位置: 类 MobEffects
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\handler\AdvancementHandler.java:40: 警告: [removal] ResourceLocation 中的 ResourceLocation(String,String) 已过时, 且标记为待删除
+        PlayerHelper.grantCriterion(player, new ResourceLocation(LibMisc.MOD_ID, "main/" + id), "code_triggered");
+                                            ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\handler\AdvancementHandler.java:44: 错误: 找不到符号
+        ResourceLocation id = ResourceLocation.tryCreate(modid + ":main/" + advancement);
+                                              ^
+  符号:   方法 tryCreate(String)
+  位置: 类 ResourceLocation
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\handler\AdvancementHandler.java:59: 错误: 找不到符号
+        ResourceLocation id = ResourceLocation.tryCreate(modid + ":main/" + advancement);
+                                              ^
+  符号:   方法 tryCreate(String)
+  位置: 类 ResourceLocation
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\handler\AdvancementHandler.java:70: 错误: 找不到符号
+        ResourceLocation id = ResourceLocation.tryCreate(modid + ":main/" + advancement);
+                                              ^
+  符号:   方法 tryCreate(String)
+  位置: 类 ResourceLocation
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\handler\AdvancementHandler.java:88: 错误: 找不到符号
+        if (event.isCancelable() && !event.getPlayer().isCreative()) {
+                                          ^
+  符号:   方法 getPlayer()
+  位置: 类型为PlayerInteractEvent的变量 event
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\handler\AdvancementHandler.java:91: 错误: 找不到符号
+                if (!checkAdvancement(event.getPlayer(), LibMisc.MOD_ID, r.getAdvancementName()))
+                                           ^
+  符号:   方法 getPlayer()
+  位置: 类型为PlayerInteractEvent的变量 event
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\handler\AdvancementHandler.java:120: 警告: [removal] ICuriosHelper 中的 getEquippedCurios(LivingEntity) 已过时, 且标记为待删除
+            CuriosApi.getCuriosHelper().getEquippedCurios(player).ifPresent((c) ->{
+                                       ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\handler\DamageHandler.java:84: 错误: 找不到符号
+                target.hurtTime=0;
+                      ^
+  符号:   变量 hurtTime
+  位置: 类型为Entity的变量 target
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\handler\DamageHandler.java:98: 错误: 找不到符号
+                target.hurtTime=0;
+                      ^
+  符号:   变量 hurtTime
+  位置: 类型为Entity的变量 target
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\handler\HerrscherHandler.java:58: 错误: 找不到符号
+        Player player = event.getPlayer();
+                             ^
+  符号:   方法 getPlayer()
+  位置: 类型为LeftClickEmpty的变量 event
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\armor\miku\ItemMikuArmor.java:98: 警告: [removal] IForgeItem 中的 onArmorTick(ItemStack,Level,Player) 已过时, 且标记为待删除
+    public void onArmorTick(ItemStack stack, Level level, Player player) {
+                ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\armor\maid\ItemMaidHelm.java:101: 错误: 对于is(ItemStack), 找不到合适的方法
+                        && effect.getCurativeItems().stream().anyMatch(e -> e.is(new ItemStack(Items.MILK_BUCKET))))
+                                                                             ^
+    方法 ItemStack.is(TagKey<Item>)不适用
+      (参数不匹配; ItemStack无法转换为TagKey<Item>)
+    方法 ItemStack.is(Item)不适用
+      (参数不匹配; ItemStack无法转换为Item)
+    方法 ItemStack.is(Predicate<Holder<Item>>)不适用
+      (参数不匹配; ItemStack无法转换为Predicate<Holder<Item>>)
+    方法 ItemStack.is(Holder<Item>)不适用
+      (参数不匹配; ItemStack无法转换为Holder<Item>)
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\armor\shootingguardian\ItemShootingGuardianArmor.java:54: 错误: 找不到符号
+        return slot == EquipmentSlot.HEAD ? new ModelShootingGuardianHelmet(slot) : new ModelShootingGuardianArmor(slot);
+                                                ^
+  符号:   类 ModelShootingGuardianHelmet
+  位置: 类 ItemShootingGuardianArmor
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemCoreGod.java:55: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemCoreGod.java:228: 错误: 不兼容的类型: boolean无法转换为int
+                Minecraft.getInstance().getItemRenderer().renderStatic(stack, ItemDisplayContext.NONE, false, ms, buffers, 0xF000F0, OverlayTexture.NO_OVERLAY, model_);
+                                                                                                       ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemCoreGod.java:238: 错误: 不兼容的类型: boolean无法转换为int
+            Minecraft.getInstance().getItemRenderer().renderStatic(stack, ItemDisplayContext.NONE, false, ms, buffers, 0xF000F0, OverlayTexture.NO_OVERLAY, model);
+                                                                                                   ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemCoreGod.java:263: 错误: 不兼容的类型: boolean无法转换为int
+                Minecraft.getInstance().getItemRenderer().renderStatic(stack, ItemDisplayContext.NONE, false, ms, buffers, light, OverlayTexture.NO_OVERLAY, model);
+                                                                                                       ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemFrostStar.java:38: 错误: 找不到符号
+                        living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWNESS, 60, 4));
+                                                                         ^
+  符号:   变量 MOVEMENT_SLOWNESS
+  位置: 类 MobEffects
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemJingweiFeather.java:28: 错误: 找不到符号
+        if (!evt.getPlayer().level().isClientSide) {
+                ^
+  符号:   方法 getPlayer()
+  位置: 类型为AttackEntityEvent的变量 evt
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemJingweiFeather.java:29: 错误: 找不到符号
+            if(!EquipmentHandler.findOrEmpty(this, evt.getPlayer()).isEmpty())
+                                                      ^
+  符号:   方法 getPlayer()
+  位置: 类型为AttackEntityEvent的变量 evt
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemJingweiFeather.java:30: 错误: 找不到符号
+                onLeftClick(evt.getPlayer(), evt.getTarget());
+                               ^
+  符号:   方法 getPlayer()
+  位置: 类型为AttackEntityEvent的变量 evt
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemJingweiFeather.java:35: 错误: 找不到符号
+        if(!EquipmentHandler.findOrEmpty(this, evt.getPlayer()).isEmpty())
+                                                  ^
+  符号:   方法 getPlayer()
+  位置: 类型为LeftClickEmpty的变量 evt
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemJingweiFeather.java:36: 错误: 找不到符号
+            NetworkHandler.INSTANCE.sendToServer(new LeftClickPack(EquipmentHandler.findOrEmpty(this, evt.getPlayer())));
+                                                                                                         ^
+  符号:   方法 getPlayer()
+  位置: 类型为LeftClickEmpty的变量 evt
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemJingweiFeather.java:41: 错误: 找不到符号
+        if(evt.getPlayer().level().isClientSide && !EquipmentHandler.findOrEmpty(this, evt.getPlayer()).isEmpty())
+              ^
+  符号:   方法 getPlayer()
+  位置: 类型为LeftClickBlock的变量 evt
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemJingweiFeather.java:41: 错误: 找不到符号
+        if(evt.getPlayer().level().isClientSide && !EquipmentHandler.findOrEmpty(this, evt.getPlayer()).isEmpty())
+                                                                                          ^
+  符号:   方法 getPlayer()
+  位置: 类型为LeftClickBlock的变量 evt
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemJingweiFeather.java:42: 错误: 找不到符号
+            NetworkHandler.INSTANCE.sendToServer(new LeftClickPack(EquipmentHandler.findOrEmpty(this, evt.getPlayer())));
+                                                                                                         ^
+  符号:   方法 getPlayer()
+  位置: 类型为LeftClickBlock的变量 evt
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemMoonPendant.java:94: 错误: 找不到符号
+                player.level().addParticle(new BlockParticleData(ParticleTypes.FALLING_DUST, Blocks.SNOW_BLOCK.defaultBlockState()), player.getX() + player.level().random.nextFloat() * 0.6 - 0.3, player.getY() + 1.1, player.getZ() + player.level().random.nextFloat() * 0.6 - 0.3, 0, -0.15, 0);
+                                               ^
+  符号:   类 BlockParticleData
+  位置: 类 ItemMoonPendant
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemNatureOrb.java:54: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemNatureOrb.java:56: 错误: 找不到符号
+        if (allowedIn(tab)) {
+            ^
+  符号:   方法 allowedIn(CreativeModeTab)
+  位置: 类 ItemNatureOrb
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemPotatoChips.java:69: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemSunRing.java:41: 错误: 不兼容的类型: RegistryObject<Item>无法转换为ItemDeathRing
+        ((ItemDeathRing) deathring).onWornTick(stack, player);
+                         ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemSunRing.java:42: 错误: 不兼容的类型: RegistryObject<Item>无法转换为ItemFrostStar
+        ((ItemFrostStar) froststar).onWornTick(stack, player);
+                         ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\bauble\ItemSunRing.java:43: 错误: 不兼容的类型: RegistryObject<Item>无法转换为ItemManaDriveRing
+        ((ItemManaDriveRing) manadrivering).onWornTick(stack, player);
+                             ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\brew\ItemBrewBase.java:121: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\brew\ItemBrewBase.java:123: 错误: 找不到符号
+        if (allowedIn(tab)) {
+            ^
+  符号:   方法 allowedIn(CreativeModeTab)
+  位置: 类 ItemBrewBase
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\brew\ItemBrewBase.java:169: 错误: 找不到符号
+                lores.add(iformattabletextcomponent.withStyle(effect.getCategory().getColor()));
+                                                                                  ^
+  符号:   方法 getColor()
+  位置: 类 MobEffectCategory
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\brew\ItemBrewBase.java:188: 错误: 找不到符号
+                    lores.add((Component.translatable("attribute.modifier.plus." + attributemodifier2.getOperation().getId(), ItemStack.ATTRIBUTE_MODIFIER_FORMAT.format(d1), Component.translatable(pair.getFirst().getDescriptionId()))).withStyle(ChatFormatting.BLUE));
+                                                                                                                    ^
+  符号:   方法 getId()
+  位置: 类 Operation
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\brew\ItemBrewBase.java:191: 错误: 找不到符号
+                    lores.add((Component.translatable("attribute.modifier.take." + attributemodifier2.getOperation().getId(), ItemStack.ATTRIBUTE_MODIFIER_FORMAT.format(d1), Component.translatable(pair.getFirst().getDescriptionId()))).withStyle(ChatFormatting.RED));
+                                                                                                                    ^
+  符号:   方法 getId()
+  位置: 类 Operation
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\brew\ItemBrewBase.java:206: 错误: 找不到符号
+        return BotaniaAPI.instance().getBrewRegistry().getOrDefault(ResourceLocation.tryParse(key));
+                                                      ^
+  符号:   方法 getOrDefault(ResourceLocation)
+  位置: 接口 Registry<Brew>
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\brew\ItemSplashGrenade.java:70: 错误: 方法不会覆盖或实现超类型的方法
+    @Override
+    ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\brew\ItemSplashGrenade.java:72: 错误: 找不到符号
+        if (allowedIn(tab)) {
+            ^
+  符号:   方法 allowedIn(CreativeModeTab)
+  位置: 类 ItemSplashGrenade
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\brew\ItemSplashGrenade.java:117: 错误: 找不到符号
+                lores.add(iformattabletextcomponent.withStyle(effect.getCategory().getColor()));
+                                                                                  ^
+  符号:   方法 getColor()
+  位置: 类 MobEffectCategory
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\brew\ItemSplashGrenade.java:136: 错误: 找不到符号
+                    lores.add((Component.translatable("attribute.modifier.plus." + attributemodifier2.getOperation().getId(), ItemStack.ATTRIBUTE_MODIFIER_FORMAT.format(d1), Component.translatable(pair.getFirst().getDescriptionId()))).withStyle(ChatFormatting.BLUE));
+                                                                                                                    ^
+  符号:   方法 getId()
+  位置: 类 Operation
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\brew\ItemSplashGrenade.java:139: 错误: 找不到符号
+                    lores.add((Component.translatable("attribute.modifier.take." + attributemodifier2.getOperation().getId(), ItemStack.ATTRIBUTE_MODIFIER_FORMAT.format(d1), Component.translatable(pair.getFirst().getDescriptionId()))).withStyle(ChatFormatting.RED));
+                                                                                                                    ^
+  符号:   方法 getId()
+  位置: 类 Operation
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\brew\ItemSplashGrenade.java:154: 错误: 找不到符号
+        return BotaniaAPI.instance().getBrewRegistry().getOrDefault(ResourceLocation.tryParse(key));
+                                                      ^
+  符号:   方法 getOrDefault(ResourceLocation)
+  位置: 接口 Registry<Brew>
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\brew\ModBrew.java:21: 错误: 找不到符号
+    public static final RegistryObject<Brew> shell = make("shell", 10000, new MobEffectInstance(MobEffects.MOVEMENT_SLOWNESS, 1200, 2),
+                                                                                                          ^
+  符号:   变量 MOVEMENT_SLOWNESS
+  位置: 类 MobEffects
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\ItemCosmicCarKey.java:28: 错误: 找不到符号
+        super(new Item.Properties().tab(ExtraBotanyGroup.TAB).rarity(Rarity.EPIC).stacksTo(1).setNoRepair());
+                                   ^
+  符号:   方法 tab(CreativeModeTab)
+  位置: 类 Properties
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\ItemFirstFractal.java:28: 错误: 找不到符号
+        super(Tiers.NETHERITE, 10, -1.6F, new Item.Properties().tab(ExtraBotanyGroup.TAB).rarity(Rarity.EPIC).stacksTo(1).setNoRepair());
+                                                               ^
+  符号:   方法 tab(CreativeModeTab)
+  位置: 类 Properties
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\ItemFlamescionWeapon.java:36: 错误: 找不到符号
+        super(Tiers.NETHERITE, 5, -1.6F, new Item.Properties().tab(ExtraBotanyGroup.TAB).rarity(Rarity.EPIC).stacksTo(1).setNoRepair());
+                                                              ^
+  符号:   方法 tab(CreativeModeTab)
+  位置: 类 Properties
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\ItemFlamescionWeapon.java:66: 错误: 不兼容的类型: RegistryObject<MobEffect>无法转换为MobEffect
+            if (player.hasEffect(ModPotions.flamescion)) {
+                                           ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\ItemFlamescionWeapon.java:76: 错误: 不兼容的类型: RegistryObject<MobEffect>无法转换为MobEffect
+                player.removeEffect(ModPotions.flamescion);
+                                              ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\ItemFlamescionWeapon.java:97: 错误: 不兼容的类型: RegistryObject<MobEffect>无法转换为MobEffect
+                            entity.addEffect(new MobEffectInstance(ModPotions.timelock, 60));
+                                                                             ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\ItemFlamescionWeapon.java:120: 错误: 不兼容的类型: RegistryObject<MobEffect>无法转换为MobEffect
+                playerIn.addEffect(new MobEffectInstance(ModPotions.incandescence, 60));
+                                                                   ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\ItemFlamescionWeapon.java:127: 错误: 不兼容的类型: RegistryObject<MobEffect>无法转换为MobEffect
+                playerIn.addEffect(new MobEffectInstance(ModPotions.incandescence, 80));
+                                                                   ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\ItemGemOfConquest.java:10: 错误: 找不到符号
+        super(new Item.Properties().tab(ExtraBotanyGroup.TAB).rarity(Rarity.EPIC).stacksTo(1).setNoRepair());
+                                   ^
+  符号:   方法 tab(CreativeModeTab)
+  位置: 类 Properties
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\ItemMotor.java:29: 错误: 找不到符号
+        super(new Item.Properties().tab(ExtraBotanyGroup.TAB).rarity(Rarity.EPIC).stacksTo(1).setNoRepair());
+                                   ^
+  符号:   方法 tab(CreativeModeTab)
+  位置: 类 Properties
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\lens\ItemLens.java:44: 错误: 找不到符号
+        return BotaniaAPI.instance().getBrewRegistry().getOrDefault(ResourceLocation.tryParse(key));
+                                                      ^
+  符号:   方法 getOrDefault(ResourceLocation)
+  位置: 接口 Registry<Brew>
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\lens\ItemLens.java:87: 错误: 找不到符号
+                lores.add(iformattabletextcomponent.withStyle(effect.getCategory().getColor()));
+                                                                                  ^
+  符号:   方法 getColor()
+  位置: 类 MobEffectCategory
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\lens\ItemLens.java:106: 错误: 找不到符号
+                    lores.add((Component.translatable("attribute.modifier.plus." + attributemodifier2.getOperation().getId(), ItemStack.ATTRIBUTE_MODIFIER_FORMAT.format(d1), Component.translatable(pair.getFirst().getDescriptionId()))).withStyle(ChatFormatting.BLUE));
+                                                                                                                    ^
+  符号:   方法 getId()
+  位置: 类 Operation
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\lens\ItemLens.java:109: 错误: 找不到符号
+                    lores.add((Component.translatable("attribute.modifier.take." + attributemodifier2.getOperation().getId(), ItemStack.ATTRIBUTE_MODIFIER_FORMAT.format(d1), Component.translatable(pair.getFirst().getDescriptionId()))).withStyle(ChatFormatting.RED));
+                                                                                                                    ^
+  符号:   方法 getId()
+  位置: 类 Operation
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\lens\LensSmelt.java:62: 错误: 找不到符号
+                            world.playEvent(2001, collidePos, Block.getId(state));
+                                 ^
+  符号:   方法 playEvent(int,BlockPos,int)
+  位置: 类型为Level的变量 world
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\lens\LensTrace.java:39: 错误: 不兼容的类型: double无法转换为Vec3
+                vecMotion = vecMotion.normalize().multiply(vecCurrentMotion.length());
+                                                                                  ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\relic\ItemCamera.java:59: 错误: 找不到符号
+        if (isRightPlayer(player, stack) && ManaItemHandler.instance().requestManaExactForTool(stack, player, MANA_PER_DAMAGE, true)
+            ^
+  符号:   方法 isRightPlayer(Player,ItemStack)
+  位置: 类 ItemCamera
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\relic\ItemCamera.java:69: 错误: 找不到符号
+                    living.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWNESS, 100, 5));
+                                                                     ^
+  符号:   变量 MOVEMENT_SLOWNESS
+  位置: 类 MobEffects
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\items\relic\ItemFirstFractal.java:27: 错误: 找不到符号
+        super(Tiers.NETHERITE, 10, -1.6F, new Item.Properties().tab(ExtraBotanyGroup.TAB).rarity(Rarity.EPIC).stacksTo(1).setNoRepair());
+                                                               ^
+  符号:   方法 tab(CreativeModeTab)
+  位置: 类 Properties
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\common\network\NetworkHandler.java:29: 警告: [removal] ResourceLocation 中的 ResourceLocation(String,String) 已过时, 且标记为待删除
+                new ResourceLocation(LibMisc.MOD_ID, "networking"),
+                ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\ExtraBotany.java:73: 警告: [removal] ModLoadingContext 中的 get() 已过时, 且标记为待删除
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ConfigHandler.CLIENT_SPEC);
+                         ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\ExtraBotany.java:74: 警告: [removal] ModLoadingContext 中的 get() 已过时, 且标记为待删除
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHandler.COMMON_SPEC);
+                         ^
+C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\ExtraBotany.java:76: 警告: [removal] FMLJavaModLoadingContext 中的 get() 已过时, 且标记为待删除
+        IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
+                                                   ^
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: C:\Users\chase\Desktop\额外植物学\extraBotany\src\main\java\com\meteor\extrabotany\client\renderer\entity\RenderEGO.java使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+注: 某些消息已经过简化; 请使用 -Xdiags:verbose 重新编译以获得完整输出
+100 个错误
+38 个警告
+仅显示前 100 个错误（共 104 个）；若要查看更多错误，请使用 -Xmaxerrs
+
+> Task :compileJava FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.8/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 20s
+1 actionable task: 1 executed
