@@ -1,5 +1,7 @@
 package com.meteor.extrabotany.common;
 
+import com.meteor.extrabotany.common.blocks.ModBlocks;
+import com.meteor.extrabotany.common.blocks.ModSubtiles;
 import com.meteor.extrabotany.common.items.ModItems;
 import com.meteor.extrabotany.common.libs.LibMisc;
 import net.minecraft.core.registries.Registries;
@@ -17,7 +19,11 @@ public final class ExtraBotanyGroup {
             .icon(() -> new ItemStack(ModItems.pylon.get()))
             .title(Component.translatable("itemGroup.extrabotany"))
             .withSearchBar()
-            .displayItems((params, output) -> ModItems.ITEMS.getEntries().forEach(entry -> output.accept(new ItemStack(entry.get()))))
+            .displayItems((params, output) -> {
+                ModItems.ITEMS.getEntries().forEach(entry -> output.accept(new ItemStack(entry.get())));
+                ModBlocks.ITEMS.getEntries().forEach(entry -> output.accept(new ItemStack(entry.get())));
+                ModSubtiles.ITEMS.getEntries().forEach(entry -> output.accept(new ItemStack(entry.get())));
+            })
             .build());
 
     private ExtraBotanyGroup() {}
