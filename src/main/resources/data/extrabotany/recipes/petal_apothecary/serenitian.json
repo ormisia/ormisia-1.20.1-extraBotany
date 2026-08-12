@@ -3,6 +3,9 @@
   "output": {
     "item": "extrabotany:serenitian"
   },
+  "reagent": {
+    "tag": "botania:seed_apothecary_reagent"
+  },
   "ingredients": [
     {
       "tag": "botania:petals/purple"
@@ -28,7 +31,7 @@
     {
       "item": "botania:life_essence"
     },
-	{
+    {
       "item": "minecraft:wither_rose"
     }
   ]

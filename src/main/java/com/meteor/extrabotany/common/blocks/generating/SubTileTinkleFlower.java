@@ -16,6 +16,7 @@ import vazkii.botania.api.block_entity.RadiusDescriptor;
 
 public class SubTileTinkleFlower extends GeneratingFlowerBlockEntity {
 
+    // radius 8 -> a 17x17x17 working cube around the flower
     private static final int RANGE = 8;
     private static final String TAG_TIME = "time";
     private int time = 0;
@@ -37,22 +38,42 @@ public class SubTileTinkleFlower extends GeneratingFlowerBlockEntity {
             CompoundTag tag = getPersistentData();
             int time = tag.getByte(TAG_TIME);
             int prevTime = time;
-            for(Player player : getLevel().getEntitiesOfClass(Player.class, new AABB(getEffectivePos().offset(-RANGE, -RANGE, -RANGE), getEffectivePos().offset(RANGE + 1, RANGE + 1, RANGE + 1)))) {
-                // Robust movement detection: use walked distance this tick plus velocity, whichever is larger
-                double walk = player.walkDist - player.walkDistO;
-                double vx = player.getDeltaMovement().x;
-                double vz = player.getDeltaMovement().z;
-                double vel = Math.max(walk, Math.sqrt(vx*vx + vz*vz));
-                if(player.hasEffect(MobEffects.MOVEMENT_SPEED))
-                    vel *= 1.2;
 
-                time += Mth.clamp((int) (vel * 10.0), 0, 8);
+            AABB box = new AABB(getEffectivePos().offset(-RANGE, -RANGE, -RANGE), getEffectivePos().offset(RANGE + 1, RANGE + 1, RANGE + 1));
+            for(Player player : getLevel().players()) {
+                if(!(player instanceof ServerPlayer)) continue;
+                if(!box.contains(player.getX(), player.getY(), player.getZ()))
+                    continue;
+
+                // Compare the player's position to the one recorded 20 ticks ago, tracked per player.
+                // getX()/getY()/getZ() always reflect the real server position, so any movement is caught.
+                String keyX = "px_" + player.getStringUUID();
+                String keyY = "py_" + player.getStringUUID();
+                String keyZ = "pz_" + player.getStringUUID();
+                if(!tag.contains(keyX)) {
+                    tag.putDouble(keyX, player.getX());
+                    tag.putDouble(keyY, player.getY());
+                    tag.putDouble(keyZ, player.getZ());
+                    continue;
+                }
+                double dx = player.getX() - tag.getDouble(keyX);
+                double dy = player.getY() - tag.getDouble(keyY);
+                double dz = player.getZ() - tag.getDouble(keyZ);
+                double moved = Math.sqrt(dx*dx + dy*dy + dz*dz);
+                tag.putDouble(keyX, player.getX());
+                tag.putDouble(keyY, player.getY());
+                tag.putDouble(keyZ, player.getZ());
+
+                if(player.hasEffect(MobEffects.MOVEMENT_SPEED))
+                    moved *= 1.2;
+
+                time += Mth.clamp((int) (moved * 10.0), 0, 8);
 
                 final int limit = 10;
 
                 if(time >= limit){
                     if(getMana() < getMaxMana())
-                        addMana(30);
+                        addMana(120); // 4x the original 30 per hit
 
                     player.causeFoodExhaustion(0.02F);
                     try {
@@ -71,7 +92,7 @@ public class SubTileTinkleFlower extends GeneratingFlowerBlockEntity {
 
     @Override
     public int getMaxMana() {
-        return 1000;
+        return 4000; // scaled up to match the 4x generation rate
     }
 
     @Override

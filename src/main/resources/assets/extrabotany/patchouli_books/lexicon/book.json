@@ -3,6 +3,7 @@
   "landing_text": "extrabotany.lexicon.landing",
   "version": "1",
   "extend": "botania:lexicon",
+  "use_resource_pack": true,
   "i18n": true,
   "macros": {
     "$(item)": "$(1)",
