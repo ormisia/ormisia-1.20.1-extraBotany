@@ -38,11 +38,11 @@ public class SubTileTinkleFlower extends GeneratingFlowerBlockEntity {
             int time = tag.getByte(TAG_TIME);
             int prevTime = time;
             for(Player player : getLevel().getEntitiesOfClass(Player.class, new AABB(getEffectivePos().offset(-RANGE, -RANGE, -RANGE), getEffectivePos().offset(RANGE + 1, RANGE + 1, RANGE + 1)))) {
-                // 1.20.1: use delta movement (velocity) for reliable movement detection
+                // Robust movement detection: use walked distance this tick plus velocity, whichever is larger
+                double walk = player.walkDist - player.walkDistO;
                 double vx = player.getDeltaMovement().x;
-                double vy = player.getDeltaMovement().y;
                 double vz = player.getDeltaMovement().z;
-                double vel = Math.sqrt(vx*vx + vy*vy + vz*vz);
+                double vel = Math.max(walk, Math.sqrt(vx*vx + vz*vz));
                 if(player.hasEffect(MobEffects.MOVEMENT_SPEED))
                     vel *= 1.2;
 
