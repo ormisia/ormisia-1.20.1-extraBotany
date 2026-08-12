@@ -1,5 +1,9 @@
 {
+  "name": "item.extrabotany.lexicon",
+  "landing_text": "extrabotany.lexicon.landing",
+  "version": "1",
   "extend": "botania:lexicon",
+  "i18n": true,
   "macros": {
     "$(item)": "$(1)",
     "$(thing)": "$(4)"
