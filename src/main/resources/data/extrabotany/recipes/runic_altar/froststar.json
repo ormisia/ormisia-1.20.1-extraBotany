@@ -6,7 +6,7 @@
   "mana": 2000,
   "ingredients": [
     {
-      "tag": "botania:runes/mana"
+      "item": "botania:rune_mana"
     },
     {
       "tag": "forge:ingots/manasteel"

@@ -22,6 +22,11 @@ public class SubTileSunBless extends GeneratingFlowerBlockEntity {
     @Override
     public void tickFlower() {
         super.tickFlower();
+        // Re-bind to the nearest mana collector whenever unbound (Botania only auto-binds on the first tick)
+        if (!level.isClientSide && (getBindingPos() == null || !isValidBinding())) {
+            setBindingPos(findClosestTarget());
+        }
+
 
         if (getMana() < getMaxMana() && this.getLevel().isDay() && this.ticksExisted % 2 == 0)
             addMana(1);

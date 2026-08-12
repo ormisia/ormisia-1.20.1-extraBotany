@@ -28,6 +28,11 @@ public class SubTileTinkleFlower extends GeneratingFlowerBlockEntity {
     public void tickFlower() {
         super.tickFlower();
 
+        // Re-bind to the nearest mana collector whenever unbound (Botania only auto-binds on the first tick)
+        if (!level.isClientSide && (getBindingPos() == null || !isValidBinding())) {
+            setBindingPos(findClosestTarget());
+        }
+
         if(!level.isClientSide && level.getGameTime() % 20L == 0){
             CompoundTag tag = getPersistentData();
             int time = tag.getByte(TAG_TIME);

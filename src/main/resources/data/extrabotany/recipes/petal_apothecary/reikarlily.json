@@ -20,13 +20,13 @@
       "tag": "botania:petals/blue"
     },
     {
-      "tag": "botania:runes/pride"
+      "item": "botania:rune_pride"
     },
     {
-      "tag": "botania:runes/sloth"
+      "item": "botania:rune_sloth"
     },
     {
-      "tag": "botania:runes/envy"
+      "item": "botania:rune_envy"
     },
     {
       "item": "botania:life_essence"

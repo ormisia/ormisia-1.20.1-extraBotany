@@ -38,6 +38,11 @@ public class SubTileAnnoyingFlower extends FunctionalFlowerBlockEntity {
     @Override
     public void tickFlower() {
         super.tickFlower();
+        // Re-bind to the nearest mana collector whenever unbound (Botania only auto-binds on the first tick)
+        if (!level.isClientSide && (getBindingPos() == null || !isValidBinding())) {
+            setBindingPos(findClosestTarget());
+        }
+
         if(redstoneSignal > 0)
             return;
 

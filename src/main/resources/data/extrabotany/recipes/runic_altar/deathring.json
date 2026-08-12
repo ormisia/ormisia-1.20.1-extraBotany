@@ -6,7 +6,7 @@
   "mana": 2000,
   "ingredients": [
     {
-      "tag": "botania:runes/envy"
+      "item": "botania:rune_envy"
     },
     {
       "tag": "forge:ingots/manasteel"

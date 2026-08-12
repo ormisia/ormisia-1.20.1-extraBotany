@@ -17,13 +17,13 @@
       "tag": "botania:petals/purple"
     },
     {
-      "tag": "botania:runes/spring"
+      "item": "botania:rune_spring"
     },
     {
-      "tag": "botania:runes/mana"
+      "item": "botania:rune_mana"
     },
 	{
-      "tag": "botania:runes/lust"
+      "item": "botania:rune_lust"
     }
   ]
 }

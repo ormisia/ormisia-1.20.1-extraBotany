@@ -17,13 +17,13 @@
       "tag": "botania:petals/blue"
     },
     {
-      "tag": "botania:runes/mana"
+      "item": "botania:rune_mana"
     },
     {
-      "tag": "botania:runes/sloth"
+      "item": "botania:rune_sloth"
     },
     {
-      "tag": "botania:runes/greed"
+      "item": "botania:rune_greed"
     },
     {
       "item": "botania:life_essence"

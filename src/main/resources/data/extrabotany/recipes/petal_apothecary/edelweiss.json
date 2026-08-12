@@ -20,10 +20,10 @@
       "tag": "botania:petals/blue"
     },
     {
-      "tag": "botania:runes/winter"
+      "item": "botania:rune_winter"
     },
     {
-      "tag": "botania:runes/mana"
+      "item": "botania:rune_mana"
     }
   ]
 }

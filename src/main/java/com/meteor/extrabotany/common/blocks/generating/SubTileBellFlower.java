@@ -18,6 +18,11 @@ public class SubTileBellFlower extends GeneratingFlowerBlockEntity {
     @Override
     public void tickFlower() {
         super.tickFlower();
+        // Re-bind to the nearest mana collector whenever unbound (Botania only auto-binds on the first tick)
+        if (!level.isClientSide && (getBindingPos() == null || !isValidBinding())) {
+            setBindingPos(findClosestTarget());
+        }
+
 
         int baseGen = 10;
         int baseY = 90;

@@ -6,7 +6,7 @@
   "mana": 2000,
   "ingredients": [
     {
-      "tag": "botania:runes/wrath"
+      "item": "botania:rune_wrath"
     },
     {
       "tag": "forge:gems/mana_diamond"
