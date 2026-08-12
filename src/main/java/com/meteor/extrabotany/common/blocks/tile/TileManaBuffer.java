@@ -42,6 +42,7 @@ public class TileManaBuffer extends BotaniaBlockEntity implements ManaReceiver, 
             self.sendPacket = false;
         }
 
+        // Pull mana from the surrounding pools (4 sides + below) into the buffer
         for (BlockPos o : POOL_LOCATIONS)
             if (world.getBlockEntity(pos.offset(o)) instanceof ManaPoolBlockEntity) {
                 ManaPoolBlockEntity p = (ManaPoolBlockEntity) world.getBlockEntity(pos.offset(o));
@@ -59,6 +60,7 @@ public class TileManaBuffer extends BotaniaBlockEntity implements ManaReceiver, 
                 self.receiveMana(current);
             }
 
+        // Push mana from the buffer to the pool above
         if (world.getBlockEntity(pos.above()) instanceof ManaPoolBlockEntity) {
             ManaPoolBlockEntity p = (ManaPoolBlockEntity) world.getBlockEntity(pos.above());
             int manaToGet = Math.min(TRANSFER_SPEED, self.getCurrentMana());

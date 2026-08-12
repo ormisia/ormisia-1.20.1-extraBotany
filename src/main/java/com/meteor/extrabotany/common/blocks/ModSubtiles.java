@@ -47,10 +47,14 @@ public class ModSubtiles {
     public static final RegistryObject<BlockEntityType<SubTileBloodyEnchantress>> BLOODY_ENCHANTRESS = createFlower("bloodyenchantress", MobEffects.WITHER, 360, SubTileBloodyEnchantress::new);
     public static final RegistryObject<BlockEntityType<SubTileSerenitian>> SERENITIAN = createFlower("serenitian", MobEffects.HERO_OF_THE_VILLAGE, 360, SubTileSerenitian::new);
 
+    @SuppressWarnings("unchecked")
     private static <T extends SpecialFlowerBlockEntity> RegistryObject<BlockEntityType<T>> createFlower(String name, MobEffect stewEffect, int stewDuration, BlockEntityType.BlockEntitySupplier<T> factory) {
-        RegistryObject<BlockEntityType<T>> be = TILES.register(name, () -> BlockEntityType.Builder.of(factory, new Block[0]).build(null));
-        RegistryObject<Block> block = BLOCKS.register(name, () -> new BlockSpecialFlower(stewEffect, stewDuration, FLOWER_PROPS, be::get));
-        RegistryObject<Block> floating = BLOCKS.register("floating_" + name, () -> new FloatingSpecialFlowerBlock(BotaniaBlocks.FLOATING_PROPS, be::get));
+        // holder breaks the circular reference: blocks reference the BE type, the BE type references the blocks
+        RegistryObject<BlockEntityType<T>>[] beHolder = new RegistryObject[1];
+        RegistryObject<Block> block = BLOCKS.register(name, () -> new BlockSpecialFlower(stewEffect, stewDuration, FLOWER_PROPS, beHolder[0]::get));
+        RegistryObject<Block> floating = BLOCKS.register("floating_" + name, () -> new FloatingSpecialFlowerBlock(BotaniaBlocks.FLOATING_PROPS, beHolder[0]::get));
+        RegistryObject<BlockEntityType<T>> be = TILES.register(name, () -> BlockEntityType.Builder.of(factory, block.get(), floating.get()).build(null));
+        beHolder[0] = be;
         ITEMS.register(name, () -> new SpecialFlowerBlockItem(block.get(), new Item.Properties()));
         ITEMS.register("floating_" + name, () -> new SpecialFlowerBlockItem(floating.get(), new Item.Properties()));
         return be;
