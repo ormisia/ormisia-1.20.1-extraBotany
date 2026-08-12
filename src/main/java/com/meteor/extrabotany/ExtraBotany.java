@@ -76,6 +76,7 @@ public class ExtraBotany {
 
         ModSounds.SOUNDS.register(modBus);
         ExtraBotanyGroup.TABS.register(modBus);
+        com.meteor.extrabotany.client.particles.ModParticles.PARTICLES.register(modBus);
         ModItems.ITEMS.register(modBus);
         ModRecipeSerializers.SERIALIZERS.register(modBus);
         ModBlocks.BLOCKS.register(modBus);
