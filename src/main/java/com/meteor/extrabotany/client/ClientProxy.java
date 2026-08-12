@@ -128,16 +128,12 @@ public class ClientProxy implements IProxy {
 
     private void initAuxiliaryRender() {
         Map<String, EntityRenderer<? extends Player>> skinMap = Minecraft.getInstance().getEntityRenderDispatcher().getSkinMap();
-        PlayerRenderer render;
-        render = (PlayerRenderer) skinMap.get("default");
-
-        render.addLayer(new LayerHerrscher(render));
-        render.addLayer(new LayerFlamescion(render));
-
-        render = (PlayerRenderer) skinMap.get("slim");
-
-        render.addLayer(new LayerHerrscher(render));
-        render.addLayer(new LayerFlamescion(render));
+        for (EntityRenderer<? extends Player> value : skinMap.values()) {
+            if (value instanceof PlayerRenderer render) {
+                render.addLayer(new LayerHerrscher(render));
+                render.addLayer(new LayerFlamescion(render));
+            }
+        }
     }
 
 }
