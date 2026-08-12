@@ -80,16 +80,14 @@ public class ItemGoblinSlayerArmor extends ItemMikuArmor {
         return LibMisc.MOD_ID + ":textures/model/armor_goblinslayer.png";
     }
 
-    private static final ItemStack[] armorSet = new ItemStack[] {
+    @Override
+    public ItemStack[] getArmorSetStacks() {
+        return new ItemStack[] {
             new ItemStack(ModItems.armor_goblinslayer_helm.get()),
             new ItemStack(ModItems.armor_goblinslayer_chest.get()),
             new ItemStack(ModItems.armor_goblinslayer_legs.get()),
             new ItemStack(ModItems.armor_goblinslayer_boots.get())
-    };
-
-    @Override
-    public ItemStack[] getArmorSetStacks() {
-        return armorSet;
+        };
     }
 
     @Override

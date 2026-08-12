@@ -60,16 +60,14 @@ public class ItemMaidArmor extends ItemMikuArmor {
         return LibMisc.MOD_ID + ":textures/model/armor_maid.png";
     }
 
-    private static final ItemStack[] armorSet = new ItemStack[] {
+    @Override
+    public ItemStack[] getArmorSetStacks() {
+        return new ItemStack[] {
             new ItemStack(ModItems.armor_maid_helm.get()),
             new ItemStack(ModItems.armor_maid_chest.get()),
             new ItemStack(ModItems.armor_maid_legs.get()),
             new ItemStack(ModItems.armor_maid_boots.get())
-    };
-
-    @Override
-    public ItemStack[] getArmorSetStacks() {
-        return armorSet;
+        };
     }
 
     @Override
