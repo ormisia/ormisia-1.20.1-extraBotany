@@ -212,7 +212,7 @@ public class ModItems {
         return ResourceLocation.fromNamespaceAndPath(LibMisc.MOD_ID, path);
     }
 
-    static {
+    public static void initCategories() {
         categoryListA.add(new WeightCategory(new ItemStack(universalpetal.get(), 4), 10));
         categoryListA.add(new WeightCategory(new ItemStack(universalpetal.get(), 8), 10));
         categoryListA.add(new WeightCategory(new ItemStack(universalpetal.get(), 6), 30));

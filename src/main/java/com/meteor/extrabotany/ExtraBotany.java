@@ -97,6 +97,7 @@ public class ExtraBotany {
         curiosLoaded = ModList.get().isLoaded("curios");
         CapabilityHandler.register();
         EquipmentHandler.init();
+        ModItems.initCategories();
 
         event.enqueueWork(() -> {
 
