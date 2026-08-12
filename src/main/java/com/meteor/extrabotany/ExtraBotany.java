@@ -23,7 +23,6 @@ import net.minecraft.client.KeyMapping;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
@@ -44,8 +43,6 @@ import static com.meteor.extrabotany.common.items.ModItems.prefix;
 
 @Mod(LibMisc.MOD_ID)
 public class ExtraBotany {
-
-    public static final CreativeModeTab itemGroup = ExtraBotanyGroup.TAB;
 
     public static IProxy proxy;
 
@@ -78,6 +75,7 @@ public class ExtraBotany {
         modBus.addListener(this::registerAttributes);
 
         ModSounds.SOUNDS.register(modBus);
+        ExtraBotanyGroup.TABS.register(modBus);
         ModItems.ITEMS.register(modBus);
         ModRecipeSerializers.SERIALIZERS.register(modBus);
         ModBlocks.BLOCKS.register(modBus);
