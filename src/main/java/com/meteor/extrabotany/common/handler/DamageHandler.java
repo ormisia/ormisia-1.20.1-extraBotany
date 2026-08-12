@@ -2,7 +2,13 @@ package com.meteor.extrabotany.common.handler;
 
 import com.meteor.extrabotany.common.core.EquipmentHandler;
 import com.meteor.extrabotany.common.items.ModItems;
+import com.meteor.extrabotany.common.libs.LibMisc;
+import net.minecraft.core.Holder;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.Enemy;
@@ -58,6 +64,12 @@ public final class DamageHandler {
         return (float) (orig + value);
     }
 
+    private static DamageSource piercingSource(Entity target, Entity source, String name) {
+        ResourceKey<DamageType> key = ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.fromNamespaceAndPath(LibMisc.MOD_ID, name));
+        Holder<DamageType> holder = target.level().registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(key);
+        return new DamageSource(holder, source, source);
+    }
+
     public boolean dmg(Entity target, Entity source, float amount, int type){
         if(target == null || !checkPassable(target, source))
             return false;
@@ -82,26 +94,13 @@ public final class DamageHandler {
             }
             case NETURAL_PIERCING: {
                 ((LivingEntity) target).hurtTime = 0;
-                // TODO: 1.20.1 removed setDamageBypassesArmor()/setDamageIsAbsolute(); the sources below no longer
-                // bypass armor/invulnerability and are the closest available match without a custom DamageType.
-                if (source instanceof Player) {
-                    DamageSource s = target.damageSources().playerAttack((Player) source);
-                    return target.hurt(s, amount);
-                } else if (source instanceof LivingEntity) {
-                    DamageSource s = target.damageSources().mobAttack((LivingEntity) source);
-                    return target.hurt(s, amount);
-                } else {
-                    return target.hurt(target.damageSources().generic(), amount);
-                }
+                DamageSource s = piercingSource(target, source, "piercing");
+                return target.hurt(s, amount);
             }
             case MAGIC_PIERCING: {
                 ((LivingEntity) target).hurtTime = 0;
-                // TODO: same note as NETURAL_PIERCING.
-                if(source == null){
-                    return target.hurt(target.damageSources().magic(), amount);
-                }else{
-                    return target.hurt(target.damageSources().indirectMagic(source, source), amount);
-                }
+                DamageSource s = piercingSource(target, source, "magic_piercing");
+                return target.hurt(s, amount);
             }
             case LIFE_LOSING:{
                 if(!(target instanceof LivingEntity))

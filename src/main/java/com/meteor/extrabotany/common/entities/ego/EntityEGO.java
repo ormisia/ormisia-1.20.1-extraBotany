@@ -928,6 +928,18 @@ public class EntityEGO extends Mob implements IEntityAdditionalSpawnData {
         return 5;
     }
 
+    @Override
+    public void startSeenByPlayer(ServerPlayer player) {
+        super.startSeenByPlayer(player);
+        bossInfo.addPlayer(player);
+    }
+
+    @Override
+    public void stopSeenByPlayer(ServerPlayer player) {
+        super.stopSeenByPlayer(player);
+        bossInfo.removePlayer(player);
+    }
+
     public UUID getBossInfoUuid() {
         return bossInfoUUID;
     }

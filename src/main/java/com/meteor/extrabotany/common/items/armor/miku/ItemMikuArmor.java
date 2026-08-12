@@ -42,7 +42,7 @@ import java.util.function.Consumer;
  * exist in 1.20.1 — armor models must be supplied through {@code IClientItemExtensions.getGenericArmorModel},
  * so the model reference below is kept as a plain helper and marked TODO.
  */
-public class ItemMikuArmor extends ArmorItem implements ManaDiscountArmor, PhantomInkable {
+public class ItemMikuArmor extends ArmorItem implements ManaDiscountArmor, PhantomInkable, net.minecraftforge.client.extensions.common.IClientItemExtensions {
 
     private static final int MANA_PER_DAMAGE = 70;
 
@@ -57,6 +57,11 @@ public class ItemMikuArmor extends ArmorItem implements ManaDiscountArmor, Phant
     public ItemMikuArmor(ArmorItem.Type armorType, ArmorMaterial mat, Item.Properties props) {
         super(mat, armorType, props);
         this.type = armorType.getSlot();
+    }
+
+    @Override
+    public HumanoidModel<?> getHumanoidArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlot equipmentSlot, HumanoidModel<?> original) {
+        return provideArmorModelForSlot(equipmentSlot);
     }
 
     @Override

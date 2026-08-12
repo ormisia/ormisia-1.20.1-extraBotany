@@ -1,0 +1,17 @@
+{
+  "message_id": "extrabotany.piercing",
+  "exhaustion": 0.0,
+  "scaling": "when_caused_by_living_non_player",
+  "effects": "hurt",
+  "death_message_type": "default",
+  "bypasses_armor": true,
+  "bypasses_invulnerability": true,
+  "bypasses_magic": false,
+  "bypasses_effects": false,
+  "is_fire": false,
+  "is_projectile": false,
+  "is_explosion": false,
+  "is_lightning": false,
+  "is_sonic_boom": false,
+  "no_anger": false
+}
